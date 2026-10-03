@@ -1,248 +1,98 @@
-import {
-  Sun,
-  PanelTop,
-  Home,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
+import { House, Factory, Sprout } from "lucide-react";
 
-export interface NavLink {
-  href: string;
-  label: string;
-}
-
-export interface Step {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-}
-
-export interface Stat {
-  value: number;
-  suffix?: string;
-  prefix?: string;
-  label: string;
-  caption: string;
-}
-
-export interface Project {
-  image: string;
-  title: string;
-  location: string;
-  power: string;
-}
-
-export interface Testimonial {
-  name: string;
-  role: string;
-  avatar: string;
-  quote: string;
-  reduction: string;
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
-
-export interface PartnerBrand {
-  name: string;
-}
-
-export const navLinks: readonly NavLink[] = [
-  { href: "#como-funciona", label: "Como funciona" },
-  { href: "#economia", label: "Economia" },
-  { href: "#galeria", label: "Projetos" },
-  { href: "#depoimentos", label: "Clientes" },
-  { href: "#faq", label: "FAQ" },
+export const links = [
+  { href: "#sobre", label: "A Soleris" },
+  { href: "#solucoes", label: "Soluções" },
+  { href: "#projetos", label: "Projetos" },
+  { href: "#economia", label: "Simule sua economia" },
 ];
-
-export const partners: readonly PartnerBrand[] = [
-  { name: "CANADIAN SOLAR" },
-  { name: "GROWATT" },
-  { name: "FRONIUS" },
-  { name: "ABGD" },
-  { name: "INMETRO" },
-  { name: "ANEEL" },
-];
-
-export const heroHighlights: readonly string[] = [
-  "Simulação gratuita em 90 segundos",
-  "Financiamento sem entrada",
-  "Garantia de 25 anos nos módulos",
-  "Equipe própria — sem terceirizar",
-];
-
-export const steps: readonly Step[] = [
+export const services = [
   {
-    icon: Sun,
-    title: "Sol capturado",
+    name: "Para a sua casa",
+    type: "Residencial",
+    icon: House,
+    text: "Mais liberdade para viver. Um sistema pensado para o seu consumo, seu telhado e os seus planos.",
+    image: "/images/panels.jpg",
+    benefits: [
+      "Dimensionamento personalizado",
+      "Integração à rede elétrica",
+      "Acompanhamento da geração",
+    ],
+  },
+  {
+    name: "Para o seu negócio",
+    type: "Comercial",
+    icon: Factory,
+    text: "Transforme um custo recorrente em uma oportunidade. Energia para o seu negócio crescer com mais previsibilidade.",
+    image: "/images/solar.jpg",
+    benefits: [
+      "Análise do perfil de consumo",
+      "Planejamento da implantação",
+      "Monitoramento do sistema",
+    ],
+  },
+  {
+    name: "Para o seu campo",
+    type: "Rural",
+    icon: Sprout,
+    text: "O sol também trabalha pela sua produção. Soluções para propriedades rurais, irrigação e operações no campo.",
+    image: "/images/landscape.jpg",
+    benefits: [
+      "Estudo das necessidades da operação",
+      "Projeto adaptado à propriedade",
+      "Orientação para manutenção",
+    ],
+  },
+];
+export const projects = [
+  {
+    name: "Um novo jeito de morar",
+    category: "Residencial",
+    image: "/images/panels.jpg",
     description:
-      "Painéis fotovoltaicos de alta eficiência transformam luz em energia desde o amanhecer.",
+      "Uma solução integrada à cobertura, pensada para aproveitar a luz do sol e acompanhar a rotina da casa.",
+    label: "Autonomia para o dia a dia",
   },
   {
-    icon: PanelTop,
-    title: "Inversor inteligente",
+    name: "Energia que move negócios",
+    category: "Comercial",
+    image: "/images/solar.jpg",
     description:
-      "Converte corrente contínua em alternada com 98% de eficiência certificada.",
+      "Uma instalação de maior escala, com aproveitamento da área disponível e foco no consumo da operação.",
+    label: "Eficiência em cada operação",
   },
   {
-    icon: Home,
-    title: "Sua casa alimentada",
+    name: "O futuro também vem do campo",
+    category: "Rural",
+    image: "/images/landscape.jpg",
     description:
-      "Energia limpa flui direto para seus aparelhos, zerando a conta de luz.",
-  },
-  {
-    icon: Zap,
-    title: "Excedente na rede",
-    description:
-      "O que sobra vira crédito na distribuidora, usado em dias nublados ou à noite.",
+      "Geração renovável em uma propriedade rural, conectando produtividade e uso consciente dos recursos.",
+    label: "Produtividade com propósito",
   },
 ];
-
-export const stats: readonly Stat[] = [
-  {
-    value: 2400,
-    suffix: "+",
-    label: "Lares energizados",
-    caption: "em todo o Brasil",
-  },
-  {
-    value: 48,
-    suffix: " GWh",
-    label: "Energia gerada",
-    caption: "limpa e renovável",
-  },
-  {
-    value: 12,
-    suffix: "M",
-    prefix: "R$ ",
-    label: "Economizado",
-    caption: "pelos nossos clientes",
-  },
-  {
-    value: 18000,
-    suffix: "t",
-    label: "CO₂ evitado",
-    caption: "equivale a 300 mil árvores",
-  },
+export const questions = [
+  [
+    "Como saber se energia solar vale a pena para mim?",
+    "O primeiro passo é avaliar suas contas de luz, o espaço disponível e as condições de instalação. A simulação oferece uma referência inicial; uma análise técnica determina o dimensionamento e a viabilidade do projeto.",
+  ],
+  [
+    "O sistema funciona em dias nublados?",
+    "Sim, os módulos podem gerar energia com luz difusa, mas a produção varia com as condições do tempo. O projeto considera o clima e o consumo da propriedade ao longo do ano.",
+  ],
+  [
+    "Vou continuar recebendo uma conta de luz?",
+    "Em um sistema conectado à rede, sim. Podem permanecer cobranças mínimas, tributos e outros componentes da tarifa. Por isso, reduzir a conta não significa necessariamente zerá-la.",
+  ],
+  [
+    "Tenho energia durante uma queda da rede?",
+    "Um sistema convencional conectado à rede desliga durante uma interrupção por segurança. Para alimentar equipamentos durante uma queda, é necessário um sistema específico com armazenamento e capacidade de operação de reserva.",
+  ],
+  [
+    "Como funciona a instalação?",
+    "O processo passa por análise de consumo, avaliação técnica, projeto, procedimentos junto à distribuidora, instalação e comissionamento. O cronograma depende das condições do imóvel e das etapas de aprovação.",
+  ],
+  [
+    "E a manutenção dos painéis?",
+    "O acompanhamento da geração e inspeções periódicas ajudam a identificar necessidades de limpeza ou manutenção. A frequência e os procedimentos devem seguir as orientações do fabricante e as condições locais.",
+  ],
 ];
-
-export const projects: readonly Project[] = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80",
-    title: "Residencial Jardim das Palmeiras",
-    location: "São Paulo, SP",
-    power: "8.4 kWp",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=1200&q=80",
-    title: "Condomínio Vista Verde",
-    location: "Campinas, SP",
-    power: "124 kWp",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80",
-    title: "Fazenda Sol Nascente",
-    location: "Ribeirão Preto, SP",
-    power: "85 kWp",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200&q=80",
-    title: "Comercial Centro Empresarial",
-    location: "Belo Horizonte, MG",
-    power: "42 kWp",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1548337138-e87d889cc369?w=1200&q=80",
-    title: "Casa de Praia Maresias",
-    location: "São Sebastião, SP",
-    power: "12 kWp",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1200&q=80",
-    title: "Indústria TechParts",
-    location: "Curitiba, PR",
-    power: "210 kWp",
-  },
-];
-
-export const testimonials: readonly Testimonial[] = [
-  {
-    name: "Ricardo Mendes",
-    role: "Empresário · Alphaville",
-    avatar:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80",
-    quote:
-      "Em 30 dias minha conta caiu de R$ 1.840 para R$ 82. A equipe da Soleris foi impecável do projeto à instalação.",
-    reduction: "95%",
-  },
-  {
-    name: "Ana Carolina Lima",
-    role: "Arquiteta · Jardins",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
-    quote:
-      "Buscava algo esteticamente bonito além de econômico. Os painéis se integraram ao design da casa como se sempre tivessem estado lá.",
-    reduction: "92%",
-  },
-  {
-    name: "Fernando Oliveira",
-    role: "Médico · Campinas",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
-    quote:
-      "Já recuperei metade do investimento em 2 anos. Melhor decisão financeira que tomei na última década.",
-    reduction: "89%",
-  },
-];
-
-export const faqs: readonly FaqItem[] = [
-  {
-    question: "Quanto tempo leva para instalar o sistema?",
-    answer:
-      "Do projeto à instalação completa, o prazo médio é de 30 a 45 dias. A instalação física no telhado leva apenas 2 a 3 dias.",
-  },
-  {
-    question: "E se o sistema quebrar? Qual a garantia?",
-    answer:
-      "Painéis têm 25 anos de garantia de desempenho. Inversores, 10 anos. Nossa mão de obra é garantida por 5 anos. Suporte técnico 24/7.",
-  },
-  {
-    question: "Preciso de bateria ou fico sem luz quando cai a rede?",
-    answer:
-      "Você permanece conectado à rede elétrica. O excedente gerado vira crédito que abate contas futuras por até 60 meses. Bateria é opcional para autonomia total.",
-  },
-  {
-    question: "Funciona em dias nublados ou no inverno?",
-    answer:
-      "Sim. Os painéis geram energia mesmo com pouca luz — cerca de 25% a 40% da capacidade. No inverno, os créditos acumulados no verão compensam.",
-  },
-  {
-    question: "Como é o financiamento? Posso parcelar?",
-    answer:
-      "Trabalhamos com BV, Santander e Sicoob. Parcelas em até 84 meses, com taxas a partir de 0,99% a.m. A parcela costuma ser menor que a economia mensal na conta.",
-  },
-  {
-    question: "Preciso fazer reforma no telhado?",
-    answer:
-      "Na maioria dos casos, não. Fazemos inspeção estrutural gratuita antes da instalação e os painéis são fixados sem danificar as telhas.",
-  },
-];
-
-export const companyInfo = {
-  name: "soleris",
-  tagline: "Energia solar para quem vê a casa como investimento de longo prazo.",
-  description:
-    "Projetos engenheirados, instalação própria, performance monitorada.",
-  email: "contato@soleris.com.br",
-  phone: "(11) 9999-9999",
-  whatsapp: "5511999999999",
-  city: "São Paulo, SP",
-} as const;
