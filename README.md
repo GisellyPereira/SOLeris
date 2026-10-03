@@ -6,6 +6,8 @@
 
 Uma experiência web de energia solar que combina identidade visual própria, fotografia e ferramentas interativas para apresentar soluções com clareza.
 
+**[Acesse o site ao vivo](https://soleris-energy.netlify.app/)**
+
 [Conheça o projeto](#sobre-o-projeto) · [Funcionalidades](#funcionalidades) · [Executar localmente](#executar-localmente)
 
 </div>
